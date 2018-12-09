@@ -1,0 +1,17 @@
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Grades\Grades.Tests\bin\Debug\Grades.Tests.dll
+E:\Grades\Grades.Tests\bin\Debug\Grades.Tests.pdb
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+E:\Grades\Grades.Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+E:\Grades\Grades.Tests\obj\Debug\Grades.Tests.csprojAssemblyReference.cache
+E:\Grades\Grades.Tests\obj\Debug\Grades.Tests.csproj.CoreCompileInputs.cache
+E:\Grades\Grades.Tests\obj\Debug\Grades.Tests.csproj.CopyComplete
+E:\Grades\Grades.Tests\obj\Debug\Grades.Tests.dll
+E:\Grades\Grades.Tests\obj\Debug\Grades.Tests.pdb
+E:\Grades\Grades.Tests\bin\Debug\Grades.exe
+E:\Grades\Grades.Tests\bin\Debug\Grades.pdb
+E:\Grades\Grades.Tests\bin\Debug\Grades.exe.config
