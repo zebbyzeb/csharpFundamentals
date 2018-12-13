@@ -15,8 +15,12 @@ namespace Grades
             //synth.Speak("hello");
 
             GradeBook book =  new GradeBook();
+
+            book.Name = "This is my book.";
             book.AddGrade(91);
             book.AddGrade(89.5f);
+
+            Console.WriteLine(book.Name);
 
             GradeStatistics stats = book.ComputeStatistics();
             //Console.WriteLine(stats.HighestGrade);

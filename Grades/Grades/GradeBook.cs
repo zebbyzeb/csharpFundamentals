@@ -20,7 +20,16 @@ namespace Grades
         }
         //List<float> grades = new List<float>();
 
-        public string Name;
+        //atm, Name is just a field.
+        //public string Name;
+
+        //this is now a property
+        public string Name
+        {
+            get;
+            set;
+        }
+
 
         public GradeStatistics ComputeStatistics()
         {
