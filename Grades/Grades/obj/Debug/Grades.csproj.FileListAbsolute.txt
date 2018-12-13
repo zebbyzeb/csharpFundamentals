@@ -5,3 +5,10 @@ E:\Grades\Grades\obj\Debug\Grades.csprojAssemblyReference.cache
 E:\Grades\Grades\obj\Debug\Grades.csproj.CoreCompileInputs.cache
 E:\Grades\Grades\obj\Debug\Grades.exe
 E:\Grades\Grades\obj\Debug\Grades.pdb
+D:\csharpFundamentals\Grades\Grades\bin\Debug\Grades.exe.config
+D:\csharpFundamentals\Grades\Grades\bin\Debug\Grades.exe
+D:\csharpFundamentals\Grades\Grades\bin\Debug\Grades.pdb
+D:\csharpFundamentals\Grades\Grades\obj\Debug\Grades.csprojAssemblyReference.cache
+D:\csharpFundamentals\Grades\Grades\obj\Debug\Grades.csproj.CoreCompileInputs.cache
+D:\csharpFundamentals\Grades\Grades\obj\Debug\Grades.exe
+D:\csharpFundamentals\Grades\Grades\obj\Debug\Grades.pdb
