@@ -24,11 +24,32 @@ namespace Grades
         //public string Name;
 
         //this is now a property
-        public string Name
+        /*public string Name
         {
             get;
             set;
+        }*/
+
+        
+        //another way of writing a property with conditions in set
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)) //if (!String.IsNullOrEmpty(value)){}
+                {
+                    _name = value; //'value' is the implicit variable inside a setter.
+                }
+            }
         }
+
+
+
 
 
         public GradeStatistics ComputeStatistics()

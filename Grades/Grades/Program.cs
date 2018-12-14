@@ -16,7 +16,8 @@ namespace Grades
 
             GradeBook book =  new GradeBook();
 
-            book.Name = "This is my book.";
+            book.Name = "This is my book";
+            book.Name = null; //this is not set because of the logic on the setter for Name.
             book.AddGrade(91);
             book.AddGrade(89.5f);
 
