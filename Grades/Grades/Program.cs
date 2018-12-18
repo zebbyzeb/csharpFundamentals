@@ -11,16 +11,54 @@ namespace Grades
     {
         static void Main(string[] args)
         {
-            SpeechSynthesizer synth = new SpeechSynthesizer();
-            synth.Speak("hello"); 
+            //SpeechSynthesizer synth = new SpeechSynthesizer();
+            //synth.Speak("hello");
 
             GradeBook book =  new GradeBook();
+            book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods.
+            book.NameChanged += new NameChangedDelegate(OnNameChanged2);
+
+            book.Name = "This is my book";
+            book.Name = null; //this is not set because of the logic on the setter for Name.
             book.AddGrade(91);
             book.AddGrade(89.5f);
 
-            GradeStatistics stats = book.ComputeStatistics();
-            Console.WriteLine(stats.HighestGrade);
+            Console.WriteLine(book.Name);
 
+            GradeStatistics stats = book.ComputeStatistics();
+            //Console.WriteLine(stats.HighestGrade);
+
+            WriteResult("Avg grade is", stats.AverageGrade,2,3,4,5);
+            WriteResult("Highest grade is", (int)stats.HighestGrade);
+
+        }
+
+        static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine("Name changed from "+existingName+" to "+newName);
+        }
+
+        static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("***");
+        }
+
+        static void WriteResult(string description, float result)
+        {
+            Console.WriteLine(description + ": " + result);
+        }
+
+        static void WriteResult(string description, params float[] result)
+        {
+            foreach (float res in result)
+            {
+                Console.WriteLine(description + ": " + res);
+            }
+        }
+
+        static void WriteResult(string description, int result)
+        {
+            Console.WriteLine(description + ": " + result);
         }
     }
 }

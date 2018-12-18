@@ -11,6 +11,7 @@ namespace Grades
         private List<float> grades;
         public GradeBook()
         {
+            _name = "empty";
             grades = new List<float>();
         }
 
@@ -20,7 +21,42 @@ namespace Grades
         }
         //List<float> grades = new List<float>();
 
-        public string Name;
+        //atm, Name is just a field.
+        //public string Name;
+
+        //this is now a property
+        /*public string Name
+        {
+            get;
+            set;
+        }*/
+
+        
+        //another way of writing a property with conditions in set
+        private string _name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                if (!String.IsNullOrEmpty(value)) //if (!String.IsNullOrEmpty(value)){}
+                {
+                    if(_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
+                    _name = value; //'value' is the implicit variable inside a setter.
+                }
+            }
+        }
+        public NameChangedDelegate NameChanged;
+
+
+
+
 
         public GradeStatistics ComputeStatistics()
         {
