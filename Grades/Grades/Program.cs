@@ -15,6 +15,8 @@ namespace Grades
             //synth.Speak("hello");
 
             GradeBook book =  new GradeBook();
+            book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods.
+            book.NameChanged += new NameChangedDelegate(OnNameChanged2);
 
             book.Name = "This is my book";
             book.Name = null; //this is not set because of the logic on the setter for Name.
@@ -29,6 +31,16 @@ namespace Grades
             WriteResult("Avg grade is", stats.AverageGrade,2,3,4,5);
             WriteResult("Highest grade is", (int)stats.HighestGrade);
 
+        }
+
+        static void OnNameChanged(string existingName, string newName)
+        {
+            Console.WriteLine("Name changed from "+existingName+" to "+newName);
+        }
+
+        static void OnNameChanged2(string existingName, string newName)
+        {
+            Console.WriteLine("***");
         }
 
         static void WriteResult(string description, float result)

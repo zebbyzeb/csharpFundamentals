@@ -11,6 +11,7 @@ namespace Grades
         private List<float> grades;
         public GradeBook()
         {
+            _name = "empty";
             grades = new List<float>();
         }
 
@@ -43,10 +44,15 @@ namespace Grades
             {
                 if (!String.IsNullOrEmpty(value)) //if (!String.IsNullOrEmpty(value)){}
                 {
+                    if(_name != value)
+                    {
+                        NameChanged(_name, value);
+                    }
                     _name = value; //'value' is the implicit variable inside a setter.
                 }
             }
         }
+        public NameChangedDelegate NameChanged;
 
 
 
