@@ -52,7 +52,7 @@ namespace Grades
                 }
             }
         }
-        public NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged;
 
 
 

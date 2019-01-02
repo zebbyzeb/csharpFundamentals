@@ -15,8 +15,13 @@ namespace Grades
             //synth.Speak("hello");
 
             GradeBook book =  new GradeBook();
-            book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods.
+            book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods. / add subscription
             book.NameChanged += new NameChangedDelegate(OnNameChanged2);
+            book.NameChanged -= new NameChangedDelegate(OnNameChanged2); //-= remove subscription
+
+           // book.NameChanged = null; //this will point the delegate to null. removing subsriptions of all the above methods.
+                                     //use events to prevent this.
+
 
             book.Name = "This is my book";
             book.Name = null; //this is not set because of the logic on the setter for Name.
