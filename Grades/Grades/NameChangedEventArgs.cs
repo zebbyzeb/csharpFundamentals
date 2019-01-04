@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    class NameChangedEventArgs
+    //this class is created to consolidate string ExistingName, string NewName
+    public class NameChangedEventArgs : EventArgs //inheritance
     {
+        public string ExistingName { get; set; }
+        public string NewName { get; set; }
+
     }
 }

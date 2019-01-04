@@ -46,13 +46,17 @@ namespace Grades
                 {
                     if(_name != value)
                     {
-                        NameChanged(_name, value);
+                        NameChangedEventArgs args = new NameChangedEventArgs();
+                        args.ExistingName = _name;
+                        args.NewName = value;
+                        //NameChanged(_name, value);
+                        NameChanged(this, args);    //"this" will reference the object that im inside of.
                     }
                     _name = value; //'value' is the implicit variable inside a setter.
                 }
             }
         }
-        public event NameChangedDelegate NameChanged;
+        public event NameChangedDelegate NameChanged; //to change a delegate to an event, add the keyword 'event' in the field.
 
 
 

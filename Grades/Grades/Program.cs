@@ -14,10 +14,12 @@ namespace Grades
             //SpeechSynthesizer synth = new SpeechSynthesizer();
             //synth.Speak("hello");
 
-            GradeBook book =  new GradeBook();
+            //GradeBook book =  new GradeBook();
+            GradeBook book = new ThrowAwayGradeBook(); 
             book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods. / add subscription
-            book.NameChanged += new NameChangedDelegate(OnNameChanged2);
-            book.NameChanged -= new NameChangedDelegate(OnNameChanged2); //-= remove subscription
+
+        //    book.NameChanged += new NameChangedDelegate(OnNameChanged2);
+        //    book.NameChanged -= new NameChangedDelegate(OnNameChanged2); //-= remove subscription
 
            // book.NameChanged = null; //this will point the delegate to null. removing subsriptions of all the above methods.
                                      //use events to prevent this.
@@ -33,14 +35,19 @@ namespace Grades
             GradeStatistics stats = book.ComputeStatistics();
             //Console.WriteLine(stats.HighestGrade);
 
-            WriteResult("Avg grade is", stats.AverageGrade,2,3,4,5);
+        //    WriteResult("Avg grade is", stats.AverageGrade,2,3,4,5);
             WriteResult("Highest grade is", (int)stats.HighestGrade);
 
         }
 
-        static void OnNameChanged(string existingName, string newName)
+        /*        static void OnNameChanged(string existingName, string newName)
+                {
+                    Console.WriteLine("Name changed from "+existingName+" to "+newName);
+                }
+        */
+        static void OnNameChanged(object sender, NameChangedEventArgs args)
         {
-            Console.WriteLine("Name changed from "+existingName+" to "+newName);
+            Console.WriteLine("Name changed from " + args.ExistingName + " to " + args.NewName);
         }
 
         static void OnNameChanged2(string existingName, string newName)
