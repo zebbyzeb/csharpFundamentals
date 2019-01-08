@@ -15,7 +15,7 @@ namespace Grades
             //synth.Speak("hello");
 
             //GradeBook book =  new GradeBook();
-            GradeBook book = new ThrowAwayGradeBook(); 
+            GradeTracker book = new ThrowAwayGradeBook();
             book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods. / add subscription
 
         //    book.NameChanged += new NameChangedDelegate(OnNameChanged2);

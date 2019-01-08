@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    public class GradeBook
+    public class GradeBook : GradeTracker
     {
-        private List<float> grades;
+        //private List<float> grades;
+        protected List<float> grades;
         public GradeBook()
         {
             _name = "empty";
             grades = new List<float>();
         }
 
-        public void AddGrade(float grade)
+        public override void AddGrade(float grade)
         {
             grades.Add(grade);
         }
@@ -33,7 +34,7 @@ namespace Grades
 
         
         //another way of writing a property with conditions in set
-        private string _name;
+    /*    private string _name;
         public string Name
         {
             get
@@ -58,11 +59,11 @@ namespace Grades
         }
         public event NameChangedDelegate NameChanged; //to change a delegate to an event, add the keyword 'event' in the field.
 
+    */
 
 
 
-
-        public GradeStatistics ComputeStatistics()
+        public override GradeStatistics ComputeStatistics()
         {
 
             GradeStatistics stats = new GradeStatistics();

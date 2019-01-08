@@ -8,9 +8,11 @@ namespace Grades
 {
     public class ThrowAwayGradeBook : GradeBook
     {
-        public GradeStatistics ComputeStatistics()
+        
+        public override GradeStatistics ComputeStatistics()
         {
-
+            float lowestGrade = grades.Min();
+            grades.Remove(lowestGrade);
             return base.ComputeStatistics();
         }
     }
