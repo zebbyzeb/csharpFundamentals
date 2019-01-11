@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace Grades
 {
-    public abstract class GradeTracker
+    public abstract class GradeTracker : IGradeTracker
     {
         public abstract void AddGrade(float grade);
         public abstract GradeStatistics ComputeStatistics();
         protected string _name;
+        public abstract IEnumerator GetEnumerator();
         public string Name
         {
             get

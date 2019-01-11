@@ -15,7 +15,7 @@ namespace Grades
             //synth.Speak("hello");
 
             //GradeBook book =  new GradeBook();
-            GradeTracker book = new ThrowAwayGradeBook();
+            IGradeTracker book = new ThrowAwayGradeBook();
             book.NameChanged += new NameChangedDelegate(OnNameChanged); //use += to point delegates to many methods. / add subscription
 
         //    book.NameChanged += new NameChangedDelegate(OnNameChanged2);
@@ -29,6 +29,11 @@ namespace Grades
             book.Name = null; //this is not set because of the logic on the setter for Name.
             book.AddGrade(91);
             book.AddGrade(89.5f);
+
+            foreach (float grade in book)
+            {
+                Console.WriteLine(grade);
+            }
 
             Console.WriteLine(book.Name);
 

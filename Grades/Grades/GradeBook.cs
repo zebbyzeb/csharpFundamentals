@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,11 @@ namespace Grades
         {
             grades.Add(grade);
         }
+
+        public override IEnumerator GetEnumerator()
+        {
+            return grades.GetEnumerator();
+        }
         //List<float> grades = new List<float>();
 
         //atm, Name is just a field.
@@ -32,34 +38,34 @@ namespace Grades
             set;
         }*/
 
-        
+
         //another way of writing a property with conditions in set
-    /*    private string _name;
-        public string Name
-        {
-            get
+        /*    private string _name;
+            public string Name
             {
-                return _name;
-            }
-            set
-            {
-                if (!String.IsNullOrEmpty(value)) //if (!String.IsNullOrEmpty(value)){}
+                get
                 {
-                    if(_name != value)
+                    return _name;
+                }
+                set
+                {
+                    if (!String.IsNullOrEmpty(value)) //if (!String.IsNullOrEmpty(value)){}
                     {
-                        NameChangedEventArgs args = new NameChangedEventArgs();
-                        args.ExistingName = _name;
-                        args.NewName = value;
-                        //NameChanged(_name, value);
-                        NameChanged(this, args);    //"this" will reference the object that im inside of.
+                        if(_name != value)
+                        {
+                            NameChangedEventArgs args = new NameChangedEventArgs();
+                            args.ExistingName = _name;
+                            args.NewName = value;
+                            //NameChanged(_name, value);
+                            NameChanged(this, args);    //"this" will reference the object that im inside of.
+                        }
+                        _name = value; //'value' is the implicit variable inside a setter.
                     }
-                    _name = value; //'value' is the implicit variable inside a setter.
                 }
             }
-        }
-        public event NameChangedDelegate NameChanged; //to change a delegate to an event, add the keyword 'event' in the field.
+            public event NameChangedDelegate NameChanged; //to change a delegate to an event, add the keyword 'event' in the field.
 
-    */
+        */
 
 
 
